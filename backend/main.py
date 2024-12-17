@@ -1,6 +1,8 @@
 from flask import Flask, request, jsonify
 from config import app, db
 from models import Contact
+
+
 # creating route for getting all contacts
 @app.route("/contacts", methods=["GET"])
 def get_contacts():
@@ -8,6 +10,8 @@ def get_contacts():
     json_contacts = list(map(lambda x: x.to_json(), contacts))
     return jsonify({"contacts": json_contacts})
 # creating route for creating a contact
+
+
 @app.route("create_contact", methods=["POST"])
 def create_contact():
     first_name = request.json.get("first_name")
@@ -26,6 +30,8 @@ def create_contact():
         return jsonify({"error": str(e)}), 500
     
     return jsonify({"message": "Contact created successfully"}), 201
+
+
 # creating route for updating a contact
 @app.route("/update_contact/<int:uset_id>")
 def update_contact(user_id):
