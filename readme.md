@@ -7,11 +7,6 @@ It's a full-stack application that allows users to create new contacts and view 
 - Delete contacts
 - Search for contacts
 ## Technologies Used
-- HTML
-- CSS
-- JavaScript
-- React
-- python
-- flask
-- sqlalchemy
-- sqlite
+frontend: HTML, CSS, JavaScript, React
+backend: python, flask, sqlalchemy
+database: sqlite
