@@ -8,5 +8,5 @@ It's a full-stack application that allows users to create new contacts and view 
 - Search for contacts
 ## Technologies Used
 frontend: HTML, CSS, JavaScript, React
-backend: python, flask, sqlalchemy
+backend: python, flask, sqlalchemy, flask-cors
 database: sqlite
