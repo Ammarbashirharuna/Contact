@@ -1,6 +1,5 @@
-
 import { useEffect, useState } from 'react'
-import ContactList from '../components/ContactList'
+import ContactList from './components/ContactList'
 
 function App() {
   const [contacts, setContacts] = useState([{ "firstName": "Ammar", "lastName": "bashir",  "email": "amma@.com", id:1 }])
@@ -18,7 +17,10 @@ function App() {
 
   return (
     <>
-     <ContactList  contacts={contacts}/>
+      <ContactList contacts={contacts} />
+      <h1 className="text-3xl font-bold underline">
+      Hello world!
+    </h1>
     </>
   )
 }
