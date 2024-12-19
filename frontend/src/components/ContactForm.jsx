@@ -23,6 +23,8 @@ const ContactForm = () => {
       if (response.status !== 201 && response.status !== 200) {
           const data = await response.json()
           alert(data.messege)
+      } else {
+        //   suscceefull
       }
   };
 
