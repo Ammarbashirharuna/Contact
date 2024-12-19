@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 from config import app, db
 from models import Contact
+from flask_migrate import Migrate
 
 
 # creating route for getting all contacts
