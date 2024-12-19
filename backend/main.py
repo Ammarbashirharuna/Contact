@@ -19,18 +19,17 @@ def create_contact():
     email = request.json.get("email")
     
     if not first_name or not last_name or not email:
-        return (
-            jsonify({"error": "Missing required fields"}), 400,
-        )
+        return jsonify({"error": "Missing required fields"}), 400
+
     new_contact = Contact(first_name=first_name, last_name=last_name, email=email)
+    
     try:
-        db.seeion.add(new_contact)
+        db.session.add(new_contact)  # Fixed typo here
         db.session.commit()
     except Exception as e:
         return jsonify({"error": str(e)}), 500
     
     return jsonify({"message": "Contact created successfully"}), 201
-
 
 # creating route for updating a contact
 @app.route("/update_contact/<int:uset_id>")
