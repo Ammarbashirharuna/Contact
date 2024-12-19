@@ -29,40 +29,69 @@ const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={onSubmit}>
-      <div>
-        <label htmlFor="firstName">First Name:</label>
-        <input
-          type="text"
-          id="firstName"
-          value={firstName}
-          onChange={(e) => setFirstName(e.target.value)}
-        />
-      </div>
+    <form
+  onSubmit={onSubmit}
+  className="max-w-md mx-auto bg-white shadow-lg rounded-lg p-6 space-y-4 border border-gray-200"
+>
+  <div>
+    <label
+      htmlFor="firstName"
+      className="block text-sm font-medium text-gray-700 mb-1"
+    >
+      First Name:
+    </label>
+    <input
+      type="text"
+      id="firstName"
+      value={firstName}
+      onChange={(e) => setFirstName(e.target.value)}
+      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none"
+      placeholder="Enter your first name"
+    />
+  </div>
 
-      <div>
-        <label htmlFor="LastName">LastName:</label>
-        <input
-          type="text"
-          id="firstName"
-          value={lastName}
-          onChange={(e) => setFirstName(e.target.value)}
-        />
-      </div>
+  <div>
+    <label
+      htmlFor="lastName"
+      className="block text-sm font-medium text-gray-700 mb-1"
+    >
+      Last Name:
+    </label>
+    <input
+      type="text"
+      id="lastName"
+      value={lastName}
+      onChange={(e) => setLastName(e.target.value)}
+      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none"
+      placeholder="Enter your last name"
+    />
+  </div>
 
-      <div>
-        <label htmlFor="email">Email:</label>
-        <input
-          type="text"
-          id="email"
-          value={email}
-          onChange={(e) => setFirstName(e.target.value)}
-        />
-      </div>
-      <button type="submit" className="py-10 px-5 bg-indigo-700">
-        Create Contact
-      </button>
-    </form>
+  <div>
+    <label
+      htmlFor="email"
+      className="block text-sm font-medium text-gray-700 mb-1"
+    >
+      Email:
+    </label>
+    <input
+      type="email"
+      id="email"
+      value={email}
+      onChange={(e) => setEmail(e.target.value)}
+      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none"
+      placeholder="Enter your email address"
+    />
+  </div>
+
+  <button
+    type="submit"
+    className="w-full py-2 px-4 bg-indigo-600 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-500 focus:outline-none"
+  >
+    Create Contact
+  </button>
+</form>
+
   );
 };
 export default ContactForm;
